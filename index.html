@@ -4,23 +4,90 @@
     <title>Analisi di Tossicità</title>
     <meta charset="UTF-8" />
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f9;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      label,
+      input,
+      button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        max-width: 475px;
+        box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
       #loading {
         display: none;
-        font-weight: bold;
+        font-size: 14px;
         margin-top: 20px;
+        color: #007bff;
+      }
+
+      #result {
+        margin-top: 20px;
+        text-align: left;
       }
     </style>
   </head>
+
   <body>
     <h1>Analisi di Tossicità</h1>
-    <div>
+    <div class="container">
       <label for="sentenceInput">Inserisci una frase in inglese:</label>
-      <input type="text" id="sentenceInput" />
+      <input type="text" id="sentenceInput" placeholder="Scrivi qui..." />
       <button id="analyzeButton">Analizza</button>
+      <div id="loading">Caricamento modello in corso...</div>
+      <div id="result"></div>
     </div>
-    <div id="loading">Caricamento modello in corso...</div>
-    <div id="result"></div>
 
+    <!--     <script src="dist/index.js"></script> -->
     <script src="src/index.ts"></script>
   </body>
 </html>
